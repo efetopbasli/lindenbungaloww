@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+
+    font-family: 'Handlee', cursive;
+   
+    background-color: #e6f6fade;
+}
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('bungalovv.jpeg');
+    background-size: cover;
+    background-position: center;
+    opacity: 1.8; /* İstediğiniz opaklık değeri */
+    z-index: -10;
+}
+
+.centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: 'Borel', cursive;
+    transform: translate(-50%, -50%);
+    font-size: 70px; /* İstediğiniz yazı boyutu */
+    color: white; /* Yazı rengi */
+}
+  
+ /* Normal Navbar Stili */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(23, 75, 99, 0.7);
+    padding: 20px;
+    position: static;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+/* Responsive Navbar Stili */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+
+  
+
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-self: center;
+    margin-left: 26%;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 20px;
+    position: relative;
+  }
+  
+  .nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0);
+    color: #fff;
+  }
+  
+  .nav-links li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-links li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  
+
+/* Ekran Genişliği 768px'e Kadar Olanlar İçin Stil Ayarları */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .map-container {
+        max-width: 100%;
+    }
+    .footer-icons {
+        margin-top: 10px;
+    }
+}
+
+
+
